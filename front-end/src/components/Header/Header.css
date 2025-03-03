@@ -15,4 +15,26 @@
   max-width: 50%;
   bottom: 10%;
   left: 6vw;
+  animation: 2s fadeIn;
+}
+
+.header-contents h2 {
+  color: white;
+  font-weight: 500;
+  font-size: max(4.5vw, 22px);
+}
+
+.header-contents p {
+  color: white;
+  font-size: max(1vw, 14px);
+}
+
+.header-contents button {
+  color: #747474;
+  font-size: max(1vw, 14px);
+  background-color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
 }

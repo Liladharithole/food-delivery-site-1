@@ -10,7 +10,6 @@
 }
 
 .body {
-  
   min-height: 100vh;
 }
 
@@ -23,3 +22,14 @@ a {
   width: 80%;
   margin: auto;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
