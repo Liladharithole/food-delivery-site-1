@@ -7,10 +7,8 @@ const ExploreMenu = ({ category, setCategory }) => {
     <div className="explore-menu" id="explore-menu">
       <h1>Explore Menu</h1>
       <p className="explore-menu-text">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-        eius, inventore nesciunt nobis sed placeat est molestiae consequatur
-        sit, autem eaque? Dolor, sint repudiandae repellat dolore facere
-        expedita veniam dicta.
+        Discover a variety of delicious dishes from different categories. Click
+        on a category to explore the menu and find your favorite food.
       </p>
       <div className="explore-menu-list">
         {menu_list.map((item, index) => {
@@ -27,7 +25,7 @@ const ExploreMenu = ({ category, setCategory }) => {
               <img
                 className={category === item.menu_name ? "active" : " "}
                 src={item.menu_image}
-                alt=""
+                alt={item.menu_name}
               />
               <p>{item.menu_name}</p>
             </div>

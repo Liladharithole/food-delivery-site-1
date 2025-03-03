@@ -20,6 +20,8 @@
 .footer-links {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-links a {
@@ -35,6 +37,7 @@
 .footer-social {
   display: flex;
   gap: 20px;
+  justify-content: center;
 }
 
 .footer-social a img {
@@ -44,4 +47,15 @@
 
 .footer-social a:hover img {
   transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-social {
+    gap: 10px;
+  }
 }
