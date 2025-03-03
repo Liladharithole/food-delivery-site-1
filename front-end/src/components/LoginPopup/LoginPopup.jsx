@@ -13,7 +13,7 @@ const LoginPopup = ({ setShowLogin }) => {
           <img
             onClick={() => setShowLogin(false)}
             src={assets.cross_icon}
-            alt=""
+            alt="Close"
           />
         </div>
         <div className="login-popup-inputs">
@@ -32,12 +32,14 @@ const LoginPopup = ({ setShowLogin }) => {
           <p>I agree to the terms and conditions</p>
         </div>
         {currState === "Login" ? (
-          <p>
-            Create A New Account ? <span onClick={()=> setcurrState("Sing Up")}>clcik here</span>
+          <p className="login-popup-switch">
+            Create A New Account?{" "}
+            <span onClick={() => setcurrState("Sign Up")}>Click here</span>
           </p>
         ) : (
-          <p>
-            Already Have a Account ? <span onClick={()=> setcurrState("Login")}>Login Here</span>
+          <p className="login-popup-switch">
+            Already Have an Account?{" "}
+            <span onClick={() => setcurrState("Login")}>Login Here</span>
           </p>
         )}
       </form>
