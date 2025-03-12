@@ -1,27 +1,27 @@
 import express from "express";
 import cors from "cors";
-import { connect } from "http2";
 import { connectDB } from "./config/db.js";
 import foodRouter from "./routes/foodRoute.js";
 
 // app config
 const app = express();
 
+// port
 const port = process.env.PORT || 4000;
-// middlewares
+
+// middleware
 app.use(express.json());
 app.use(cors());
 
-// db config
+// DB config
 connectDB();
 
-// api routes
-app.use("api/food", foodRouter);
-
-// api routes
+// api endpoint
+app.use("/api/food", foodRouter);
+app.use("/images", express.static("uploads"));
 
 app.get("/", (req, res) => {
-  res.send("API working");
+  res.send("API Connected");
 });
 
 app.listen(port, () => {
